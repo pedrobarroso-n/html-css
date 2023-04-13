@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/*GERAIS*/
+h3{
+    text-decoration: underline;
+}
+h1{
+    text-align: center;
+    font-family: fantasy;
+}
+abbr{
+    text-decoration: none;
+}
+
+/*ESPECIFICOS*/
+.cor2{
+    color: aqua;
+    text-decoration:  overline;
+}
+.cor{
+    color: goldenrod;
+}
+
+.externo{
+    color: rgb(196, 196, 18);
+}
