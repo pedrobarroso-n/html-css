@@ -7,10 +7,79 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="imgs/icons8-3-key-48.png" type="image/x-icon">
     <title>Estudo de html e css</title>
+    <style>
+        div.quadrado{
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+        }
+        div#q1{
+            background-color: lightgreen;
+        }
+        div#q2{
+            background-image: linear-gradient(orange,red);
+        }
+        div#q3{
+            background-image: url(imgs/pattern001.png);
+        }
+        div#big{
+            height: 300px;
+            width: 915px;
+            padding: 20px;
+            background-image: url(imgs/wallpaper001.jpg);
+        }
+        div#big2{
+            background-image: url(https://gustavoguanabara.github.io/html-css/imagens/mascote.png);
+            background-size: 50px 50px;    /*tamanho de cada imagem da malha*/
+            background-repeat: repeat;   /*repetir ou nao, em qual eixo tbm*/
+            margin-top: 30px;
+            width: 955px;
+            height: 200px;
+        }
+        div.bloco{
+            height: 170px;
+            width: 50%;
+            margin: auto;
+            border: 2px dashed black;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background-image: url(imgs/wallpaper003.jpg);
+        }
+        div#q4{
+            background-position: left top;
+        }
+        div#q5{
+            background-position: left center;
+        }
+        div#q6{
+            background-position: right bottom;
+        }
+        div#q7{
+            background-position: right top;
+        }
+        div#q8{
+            background-position: center center;
+        }
+    </style>
 </head>
 <body>
     <h1>Imagens de Fundo</h1>
     <h4><a href="index_2.html"> |<<| Voltar para a anterior</a></h4>
     <hr>
+    <h3>Por imagens no fundo:</h3>
+    <div id="big">  
+        <div class="quadrado" id="q1"></div>
+        <div class="quadrado" id="q2"></div>
+        <div class="quadrado" id="q3"></div>
+    </div>
+    <div id="big2"></div>
+    <h3>Posicionamento de imagem:</h3>
+    <div class="bloco" id="q4"></div>
+    <div class="bloco" id="q5"></div>
+    <div class="bloco" id="q6"></div>
+    <div class="bloco" id="q7"></div>
+    <div class="bloco" id="q8"></div>
+    <p style="text-align: center;">*por padrão vem left-top*</p>
 </body>
 </html>
