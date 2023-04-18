@@ -31,15 +31,15 @@
         }
         div#big2{
             background-image: url(https://gustavoguanabara.github.io/html-css/imagens/mascote.png);
-            background-size: 50px 50px;    /*tamanho de cada imagem da malha*/
-            background-repeat: repeat;   /*repetir ou nao, em qual eixo tbm*/
+            background-size: 50px 50px;     /*tamanho de cada imagem da malha (mascote do curso em video)*/
+            background-repeat: repeat;      /*repetir ou nao, em qual eixo x ou y*/
             margin-top: 30px;
             width: 955px;
             height: 200px;
         }
         div.bloco{
             height: 170px;
-            width: 50%;
+            width: 48%;
             margin: auto;
             border: 2px dashed black;
             margin-bottom: 10px;
@@ -50,7 +50,7 @@
             background-position: left top;
         }
         div#q5{
-            background-position: left center;
+            background-position: left bottom;
         }
         div#q6{
             background-position: right bottom;
@@ -60,6 +60,38 @@
         }
         div#q8{
             background-position: center center;
+        }
+        #alinhar{
+            text-align: center;
+        }
+        p#link{
+            text-align: center;
+            width: 200px;
+            margin: auto;
+            padding: 15px 0px;
+            outline: darkblue dashed;
+            font-size: 1.2em;
+        }
+        section#contem{
+            height: 300px;
+            padding: 10px;
+            position: relative;
+            background-color: aqua;
+            background-image: url(imgs/target001.png);
+            background-size: 100% 100%;
+        }
+        article#contido{
+            height: 200px;
+            width: 350px;
+            position: absolute;
+            background-color: blueviolet;
+            background-image: url(imgs/target001.png);
+            background-size: 100% 100%;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
@@ -80,6 +112,10 @@
     <div class="bloco" id="q6"></div>
     <div class="bloco" id="q7"></div>
     <div class="bloco" id="q8"></div>
-    <p style="text-align: center;">*por padrão vem left-top*</p>
+    <p id="alinhar">*por padrão vem left-top*</p>
+    <h3>Tratamento de Imagens no fundo:</h3>
+    <p id="link"><a href="pag_4.html">Ver Exemplo</a></p>
+    <h3>Centralização Vertical de caixas:</h3>
+    <section id="contem"><article id="contido"></article></section>
 </body>
 </html>
