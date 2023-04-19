@@ -93,6 +93,31 @@
 
             transform: translate(-50%, -50%);
         }
+        table{
+            width: 200px;
+            border-collapse: collapse;  /*collapse -(tira o espaço entre as bordas), separete -(deixa espaço entre as bordas)*/
+        }
+        tr{
+            background-color: yellowgreen;
+        }
+        td.dado{
+            background-color: yellow;
+        }
+        td{
+            border: 1px solid black;
+            padding: 8px;
+        }
+        table#t2{
+            width: 200px;
+            height: 200px;
+        }
+        table#t2 tr{
+            background-color: transparent;
+        }
+        table#t2 td{
+            text-align: center;
+            vertical-align: top;  /*na vertical -(top/bottom/middle)*/
+        }
     </style>
 </head>
 <body>
@@ -118,5 +143,35 @@
     <h3>Centralização Vertical de caixas:</h3>
     <section id="contem"><article id="contido"></article></section>
     <h3>Tabelas no html:</h3>
+    <table> 
+        <tr>  <!--1ª linha-->
+            <td>A1
+            <td>B1
+            <td>C1
+        <tr>  <!--2ª linha-->
+            <td>A2
+            <td>B2
+            <td class="dado">C2
+        <tr>  <!--3ª linha-->
+            <td>A3
+            <td>B3
+            <td>C3
+        <tr>  <!--4ª linha-->
+            <td>A4
+            <td>B4
+    </table>  <!--tr e td não precisa de fechamento-->
+    <br>
+    <table id="t2">
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+    </table>
 </body>
 </html>
