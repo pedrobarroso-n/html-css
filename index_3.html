@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="imgs/icons8-3-key-48.png" type="image/x-icon">
     <title>Estudo de html e css</title>
-    <style>
+    <style> 
         div.quadrado{
             border: 1px solid black;
             width: 300px;
@@ -93,9 +93,6 @@
 
             transform: translate(-50%, -50%);
         }
-        table{
-            border-collapse: collapse;  /*collapse -(tira o espaço entre as bordas), separete -(deixa espaço entre as bordas)*/
-        }
         table#t1{
             width: 200px;  
         }
@@ -104,10 +101,6 @@
         }
         td.dado{
             background-color: yellow;
-        }
-        td{
-            border: 1px solid black;
-            padding: 8px;
         }
         table#t2{
             width: 200px;
@@ -133,6 +126,22 @@
         }
         #t3 caption{
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: gainsboro;
+            padding: 7px;
+        }
+        table{
+            border-collapse: collapse;  /*collapse -(tira o espaço entre as bordas), separete -(deixa espaço entre as bordas)*/
+        }
+        td{
+            border: 1px solid black;
+            padding: 8px;
+        }
+        #t3 tbody > tr:nth-child(even){  /*2n-1 ou odd (zebrado ordem impar), 2n ou even (zebrado ordem par)*/
+            background-color: silver;
+        }
+        table#t4{
+            width: 250px;
+            text-align: center;
         }
     </style>
 </head>
@@ -192,7 +201,7 @@
     <h3>Tabelas Grandes:</h3>
     <table id="t3">
         <caption>
-            Dados do ano de 1993
+            População no Nordeste - 1993
         </caption>
         <thead>
             <tr>
@@ -244,6 +253,24 @@
                 <td class="num">5 822 771</td>
             </tr>
         </tfoot>
+    </table>
+    <h3>Mesclagem de células:</h3>
+    <table id="t4">
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td>  <!--ocupar 2 espaços-->
+        </tr>
+        <tr>
+            <td rowspan="3">D</td>  <!--ocupar 3 espaços-->
+            <td>E</td>
+            <td rowspan="2">F</td>
+        </tr>
+        <tr>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td colspan="2">L</td>
+        </tr>
     </table>
 </body>
 </html>
