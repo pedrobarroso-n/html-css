@@ -11,6 +11,12 @@ h1{
 abbr{
     text-decoration: none;
 }
+h4{
+    font-family: monospace;
+}
+h4 > a{
+    text-decoration: none;
+}
 
 /*ESPECIFICOS*/
 .cor2{

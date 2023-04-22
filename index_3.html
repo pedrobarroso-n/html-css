@@ -94,10 +94,12 @@
             transform: translate(-50%, -50%);
         }
         table{
-            width: 200px;
             border-collapse: collapse;  /*collapse -(tira o espaço entre as bordas), separete -(deixa espaço entre as bordas)*/
         }
-        tr{
+        table#t1{
+            width: 200px;  
+        }
+        #t1 tr{
             background-color: yellowgreen;
         }
         td.dado{
@@ -111,12 +113,26 @@
             width: 200px;
             height: 200px;
         }
-        table#t2 tr{
+        #t2 tr{
             background-color: transparent;
         }
-        table#t2 td{
+        #t2 td{
             text-align: center;
             vertical-align: top;  /*na vertical -(top/bottom/middle)*/
+        }
+        table#t3{
+            width: 400px;
+        }
+        #t3 th{
+            background-color: gray;
+            padding: 7px;
+            border: 1px solid black;
+        }
+        #t3 .num{
+            text-align: right;
+        }
+        #t3 caption{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
     </style>
 </head>
@@ -143,7 +159,7 @@
     <h3>Centralização Vertical de caixas:</h3>
     <section id="contem"><article id="contido"></article></section>
     <h3>Tabelas no html:</h3>
-    <table> 
+    <table id="t1"> 
         <tr>  <!--1ª linha-->
             <td>A1
             <td>B1
@@ -172,6 +188,62 @@
             <td>B2</td>
             <td>C2</td>
         </tr>
+    </table>
+    <h3>Tabelas Grandes:</h3>
+    <table id="t3">
+        <caption>
+            Dados do ano de 1993
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Estados</th>  <!--tag para titulo-->
+                <th scope="col" style="width: 80px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">599 325</td> <!--tag para dado-->
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">649 223</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">609 223</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">715 678</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">701 897</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">558 321</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">689 880</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">698 990</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">600 234</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Totalização</th> <!--scope ajuda o mecanismo de busca dos browser, titulo = dados em baixo (col) titulo = dados ao lado (row)-->
+                <td class="num">5 822 771</td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 </html>
