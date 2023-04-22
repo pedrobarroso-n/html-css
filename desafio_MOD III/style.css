@@ -15,7 +15,6 @@
 }
 body{
     background-color: cadetblue;
-    min-width: 100vh;
     font-family: var(--font_1);
 }
 header{
@@ -25,7 +24,7 @@ header{
 }
 header > h1{
     padding-top: 40px;
-    font-size: 9vw;
+    font-size: 8vw;
     font-variant: small-caps;
     font-family: var(--font_2);
 }
@@ -41,15 +40,12 @@ a:hover{
     text-decoration: underline;
 }
 section{
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    padding-left: 35px;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+    padding-left: 30px;
     line-height: 1.8em;
     font-family: var(--font_3);
     font-size: 3vw;
-}
-section > p{
-    padding-bottom: 2em;
 }
 section.normal{
     background-color: white;
