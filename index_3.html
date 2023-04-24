@@ -143,6 +143,13 @@
             width: 250px;
             text-align: center;
         }
+        table#t5{
+            width: 450px;
+        }
+        #t5 tr th{
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
     </style>
 </head>
 <body>
@@ -198,7 +205,7 @@
             <td>C2</td>
         </tr>
     </table>
-    <h3>Tabelas Grandes:</h3>
+    <h3>Tabelas Grandes e Scope:</h3>
     <table id="t3">
         <caption>
             População no Nordeste - 1993
@@ -271,6 +278,51 @@
         <tr>
             <td colspan="2">L</td>
         </tr>
+    </table>
+    <h3>Tabela Exemplo:</h3>
+    <table id="t5">
+        <caption></caption>
+        <thead>
+            <tr>
+                <th scope="col">Grupo</th>
+                <th scope="col">Nomes</th>
+                <th scope="colgroup" colspan="3">Filmes</th> <!--colgroup pq tem mais de uma coluna-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Mulher</th> <!--rowgroup pq tem mais de uma linha-->
+                <td>Anna</td>
+                <td>Star War</td>
+                <td>Rush</td>
+                <td>Pixels</td>
+            </tr>
+            <tr>
+                <td>Kattia</td>
+                <td>Star War V</td>
+                <td>Emojii</td>
+                <td>Pânico</td>
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="3">Homem</th>
+                <td>Pablo</td>
+                <td>Star War II</td>
+                <td>Hora do Rush</td>
+                <td>Mario Bros</td>
+            </tr>
+            <tr>
+                <td>Guito</td>
+                <td>Star War III</td>
+                <td>Panico VI</td>
+                <td>Vingadores</td>
+            </tr>
+            <tr>
+                <td>Jeki</td>
+                <td>Star War IV</td>
+                <td>Lego Batman</td>
+                <td>AnaBely II</td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
