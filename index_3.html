@@ -150,6 +150,33 @@
             background-color: lightskyblue;
             border: 1px solid black;
         }
+        table#t6{
+            width: 300px;
+        }
+        #t6 caption{
+            font-family: monospace;
+            font-size: 1.3em;
+        }
+        #t6 th{
+            border: 1px solid black;
+            padding: 8px;
+        }
+        .destaque{
+            background-color: chartreuse;
+        }
+        .cidade{
+            background-color: aquamarine;
+        }
+        #t7 th,td{
+            border: 1px solid black;
+            padding: 15px;
+        }
+        #t7 tr:nth-child(even){
+            background-color: rgb(240, 238, 238);
+        }
+        div#container{
+            overflow-x: auto;
+        }
     </style>
 </head>
 <body>
@@ -324,5 +351,152 @@
             </tr>
         </tbody>
     </table>
+    <br>
+    <table id="t6">
+        <colgroup>
+            <col span="2"> <!--Tudo q modificar nessa coluna afetara tbm a outra, pode por mais numeros para mais colunas-->
+            <col class="cidade">  <!--Modificar uma coluna, cada uma representa-->
+            <col>
+        </colgroup>
+        <caption>Cadrastro</caption>
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Profissão</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pedro</td>
+                <td>M</td>
+                <td>21</td>
+                <td>Enfermeiro</td>
+            </tr>
+            <tr class="destaque">
+                <td>Maria</td>
+                <td>F</td>
+                <td>27</td>
+                <td>Engenheira</td>
+            </tr>
+            <tr>
+                <td>Kelly</td>
+                <td>M</td>
+                <td>16</td>
+                <td>Tecnico em Informatica</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Tabela responsiva:</h3>
+    <div id="container">
+        <table id="t7">
+            <tr>
+                <th>Produto</th>
+                <th>Jan</th>
+                <th>Fev</th>
+                <th>Mar</th>
+                <th>Abr</th>
+                <th>Mai</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Ago</th>
+                <th>Set</th>
+                <th>Out</th>
+                <th>Nov</th>
+                <th>Dez</th>
+            </tr>
+            <tr>
+                <td>Negico</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>22</td>
+                <td>29</td>
+                <td>42</td>
+                <td>33</td>
+                <td>25</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Negico</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>22</td>
+                <td>29</td>
+                <td>42</td>
+                <td>33</td>
+                <td>25</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Negico</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>22</td>
+                <td>29</td>
+                <td>42</td>
+                <td>33</td>
+                <td>25</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Negico</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>22</td>
+                <td>29</td>
+                <td>42</td>
+                <td>33</td>
+                <td>25</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Negico</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>22</td>
+                <td>29</td>
+                <td>42</td>
+                <td>33</td>
+                <td>25</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Negico</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>22</td>
+                <td>29</td>
+                <td>42</td>
+                <td>33</td>
+                <td>25</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
