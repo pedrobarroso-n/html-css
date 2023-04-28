@@ -7,9 +7,26 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="imgs/icons8-4-key-48.png" type="image/x-icon">
     <title>Estudo de html e css</title>
+    <style>
+        iframe{
+            border: 2px dashed black; /*frameborder so dar pra usar 0 ou 1*/
+            margin: 8px;
+        }
+    </style>
 </head>
 <body>
-    <h1></h1>
+    <h1>Iframes e Formularios</h1>
     <h4><a href="index_3.html"> |<<| Voltar para a anterior</a></h4>
+    <hr>
+    <h3>Iframe em uso:</h3>
+    <iframe src="https://cursoemvideo.com" frameborder="0" width="400">
+        <!--configuraçoes de width/height na CSS sao as oq predomina-->
+    </iframe>
+    <br>
+    <iframe src="https://cursoemvideo.com" frameborder="0" height="200" scolling="auto"> 
+        <a href="https://cursoemvideo.com" target="_blank">CursoemVideo.com</a>
+        <!--caso não abra o iframe mostrará um link para o conteudo, alguns celulares não funciona o iframe-->
+        <!--scolling - auto(padrao) yes(da barra de rolagem mesmo q caiba) no(nao da barra de rolagem mesmo q precise)-->
+    </iframe>
 </body>
 </html>
