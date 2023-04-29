@@ -9,7 +9,12 @@
     <title>Estudo de html e css</title>
     <style>
         iframe{
-            margin: 10px;
+            padding: 10px;
+        }
+        iframe#tela{
+            margin: 1px solid black;
+            width: 96%;
+            height: 300px;
         }
     </style>
 </head>
@@ -18,14 +23,21 @@
     <h4><a href="index_3.html"> |<<| Voltar para a anterior</a></h4>
     <hr>
     <h3>Iframe em uso:</h3>
-    <iframe src="https://cursoemvideo.com" frameborder="0" width="300">
-        <!--configuraçoes de width/height na CSS sao as oq predomina-->
+    <iframe src="https://pedrobarroso-n.github.io/html-css/" frameborder="1" >
+        <!--configuraçoes de width/height na CSS sao as oq predomina/nao por tabelas em iframe-->
         <!--frameborder so dar pra usar 0 ou 1, usar css para personalizar-->
     </iframe>
-    <iframe src="https://pedrobarroso-n.github.io/html-css/" frameborder="1" height="200" scolling="auto"> 
-        <!--alguns celulares não funciona o iframe/evitar usar tabelas no iframe tbm-->
+    <iframe src="pag_3.html" frameborder="0" width="250px" scolling="auto">
+        <p>Seu navegador nao e compativel</p> <!--caso nao carregue, alguns navegadores de celular nao suportam-->
         <!--scolling - auto(padrao) yes(da barra de rolagem mesmo q caiba) no(nao da barra de rolagem mesmo q precise)-->
     </iframe>
-    <iframe src="https://pedrobarroso-n.github.io/html-css/pag_3.html" frameborder="0" width="250px"></iframe>
+    <h3>Acesso pelo iframe:</h3>
+    <ul>
+        <li><a href="desafio_MOD III/002/index.html" target="frame">Abrir pagina I</a></li>
+        <li><a href="desafio_MOD I/002/index.html" target="frame">Abrir pagina II</a></li>
+    </ul>
+    <iframe src="" id="tela" name="frame">
+        <!--name para o link abrir no iframe ao inves de fora da pagina-->
+    </iframe> 
 </body>
 </html>
