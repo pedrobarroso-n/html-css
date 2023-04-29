@@ -9,8 +9,7 @@
     <title>Estudo de html e css</title>
     <style>
         iframe{
-            border: 2px dashed black; /*frameborder so dar pra usar 0 ou 1*/
-            margin: 8px;
+            margin: 10px;
         }
     </style>
 </head>
@@ -19,14 +18,14 @@
     <h4><a href="index_3.html"> |<<| Voltar para a anterior</a></h4>
     <hr>
     <h3>Iframe em uso:</h3>
-    <iframe src="https://cursoemvideo.com" frameborder="0" width="400">
+    <iframe src="https://cursoemvideo.com" frameborder="0" width="300">
         <!--configuraçoes de width/height na CSS sao as oq predomina-->
+        <!--frameborder so dar pra usar 0 ou 1, usar css para personalizar-->
     </iframe>
-    <br>
-    <iframe src="https://cursoemvideo.com" frameborder="0" height="200" scolling="auto"> 
-        <a href="https://cursoemvideo.com" target="_blank">CursoemVideo.com</a>
-        <!--caso não abra o iframe mostrará um link para o conteudo, alguns celulares não funciona o iframe-->
+    <iframe src="https://pedrobarroso-n.github.io/html-css/" frameborder="1" height="200" scolling="auto"> 
+        <!--alguns celulares não funciona o iframe/evitar usar tabelas no iframe tbm-->
         <!--scolling - auto(padrao) yes(da barra de rolagem mesmo q caiba) no(nao da barra de rolagem mesmo q precise)-->
     </iframe>
+    <iframe src="https://pedrobarroso-n.github.io/html-css/pag_3.html" frameborder="0" width="250px"></iframe>
 </body>
 </html>
