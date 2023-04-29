@@ -35,8 +35,19 @@
         <li><a href="desafio_MOD III/002/index.html" target="frame">Abrir pagina I</a></li>
         <li><a href="desafio_MOD I/002/index.html" target="frame">Abrir pagina II</a></li>
     </ul>
-    <iframe src="" id="tela" name="frame">
+    <iframe  id="tela" name="frame" srcdoc="<h2>Escolha um dos links acima !!!</h2><img src='imgs/img5.png' width='350px'>">
+        <!--srcdoc permite criar o conteudo estatico com tags ou com o src normal pode criar um arquivo para isso-->
         <!--name para o link abrir no iframe ao inves de fora da pagina-->
     </iframe> 
+    <h3>Iframe seguro:</h3>
+    <iframe src="form_test.html" frameborder="1" sandbox="allow-same-origin, allow-forms, allow-scripts" referrerpolicy="no-referrer">
+        Seu navegador não é compativel...
+        <!--sandbox bloqueia o acesso a certas coisas do iframe, permintindo certas coisas-->
+        <!--referrerpolicy o iframe nao coletara dados do usuario-->
+    </iframe>
+    <br>
+    <iframe src="jv.html" referrerpolicy="no-referrer" sandbox="allow-scripts">
+        <!--usando o sandbox e o referrerpolicy podemos liberar o acesso apenas a certos funçoes-->
+    </iframe>
 </body>
 </html>
