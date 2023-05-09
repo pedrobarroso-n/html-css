@@ -8,15 +8,9 @@
     <link rel="shortcut icon" href="imgs/icons8-4-key-48.png" type="image/x-icon">
     <title>Estudo de html e css</title>
     <style>
-        iframe{
-            padding: 10px;
-        }
         iframe#tela{
             width: 96vw;
             height: 300px;
-        }
-        fieldset{
-            width: 400px;
         }
     </style>
 </head>
@@ -29,7 +23,7 @@
         <!--configuraçoes de width/height na CSS sao as oq predomina/nao por tabelas em iframe-->
         <!--frameborder so dar pra usar 0 ou 1, usar css para personalizar-->
     </iframe>
-    <iframe src="pag_3.html" frameborder="0" width="250px" scolling="auto">
+    <iframe src="outras-paginas/pag_3.html" frameborder="0" width="250px" scolling="auto">
         <p>Seu navegador nao e compativel</p> <!--caso nao carregue, alguns navegadores de celular nao suportam-->
         <!--scolling - auto(padrao) yes(da barra de rolagem mesmo q caiba) no(nao da barra de rolagem mesmo q precise)-->
     </iframe>
@@ -43,24 +37,28 @@
         <!--name para o link abrir no iframe ao inves de fora da pagina-->
     </iframe> 
     <h3>Iframe seguro:</h3>
-    <iframe src="form_test.html" frameborder="1" sandbox="allow-same-origin, allow-forms, allow-scripts" referrerpolicy="no-referrer">
+    <iframe src="outras-paginas/form_test.html" frameborder="1" sandbox="allow-same-origin, allow-forms, allow-scripts" referrerpolicy="no-referrer">
         Seu navegador não é compativel...
         <!--sandbox bloqueia o acesso a certas coisas do iframe, permintindo certas coisas-->
         <!--referrerpolicy o iframe nao coletara dados do usuario-->
     </iframe>
-    <iframe src="jv.html" referrerpolicy="no-referrer" sandbox="allow-scripts">
+    <iframe src="outras-paginas/jv.html" referrerpolicy="no-referrer" sandbox="allow-scripts">
         <!--usando o sandbox e o referrerpolicy podemos liberar o acesso apenas a certos funçoes-->
     </iframe>
     <h3>Utilidades do iframe:</h3>
     <ul>
         <li>Por Mapas</li>
         <li>Por Videos</li>
-        <li>Por Planilhas/Documentos</li>
-        <li>Por Apresentações</li>
-        <li><a href="https://youtu.be/dzhJsc1YszU" target="_blank">!! Ver como !!</a></li>
+        <li>Por Planilhas/Documentos/Apresentações</li>  
     </ul>
+    <h3>Media Queries e Media Features:</h3>
+    <ol type="I">
+        <li><a href="mediaqueries/mq01/index.html">Ver Exemplo</a></li>
+        <li><a href="mediaqueries/mq02/index.html">Ver Exemplo</a></li>
+        <li><a href="mediaqueries/mq03/index.html">Ver Exemplo</a></li>
+    </ol>
     <h3>Formularios em uso:</h3>
-    <form action="cadastro.php" method="get" autocomplete="on"> 
+    <form action="outras-paginas/cadastro.php" method="get" autocomplete="on"> 
         <!--autocomplete="off" nao poe aqueles registros abaixo da caixa-->
         <!--method="get" para dados não sensiveis (URL compartilhavel)-->
         <!--method="post" ocultar dados a usuarios padrao, enviar arquivos maiores-->

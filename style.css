@@ -17,6 +17,12 @@ h4{
 h4 > a{
     text-decoration: none;
 }
+fieldset{
+    width: 400px;
+}
+iframe{
+    padding: 10px;
+}
 /*DO INDEX_1*/
 .cor2{
     color: aqua;
