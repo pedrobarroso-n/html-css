@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*Typical Device Breakpoints: (day 12.05.23)
+............................................
+small screen - 600px and down
+mobile - 600px up to 768px
+tablets - 768px up to 992px
+desktop - 992px up to 1200px
+big screen - 1200px and up
+*/
+
+@media screen and (min-width: 768px){
+    i#burguer{
+        display: none;
+    }
+    menu{
+        display: block;
+    }
+    menu > ul > li{
+        display: inline-block;
+    }
+    main{
+        width: 768px;
+    }
+}
