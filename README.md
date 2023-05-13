@@ -1,4 +1,6 @@
 # html-css
- Curso de Html5 e Css3 - anotações de curso
+ Curso de Html5 e Css3 - principal
 
- <p><a href="https://pedrobarroso-n.github.io/html-css/principal-paginas/index_1.html">Acessar anotações de curso</a></p>
+ <ul>
+    <li><a href="https://pedrobarroso-n.github.io/html-css/principal-paginas/index_1.html">Acessar anotações de curso</a></li>
+</ul>
