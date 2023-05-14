@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de html e css</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../imgs/icons8-5-48.png" type="image/x-icon">
+    <style>
+        .itens{
+            background-color: cyan;
+            text-align: center;
+            font-size: 1.2em;
+            margin: 5px;
+        }
+        section.display-block{
+          display: block;
+          border: 1px solid #ccc;
+          width: 160px;
+        }
+        section.display-flex{
+            display: flex;
+            border: 1px solid #ccc;
+            width: 160px;
+        }
+        .flex-item-1{
+            flex: 1;
+        }
+        /**/
+        section.flex-direction-row{
+            flex-direction: row;
+        }
+        section.flex-direction-row-reverse{
+            flex-direction: row-reverse;
+        }
+        section.flex-direction-column{
+            flex-direction: column;
+        }
+        section.flex-direction-column-reverse{
+            flex-direction: column-reverse;
+        }
+        /**/
+        section.display-nowrap{
+            flex-wrap: nowrap;
+            width: 120px;
+        }
+        section.display-wrap{
+            flex-wrap: wrap;
+            width: 120px;
+        }
+        section.display-wrap-reverse{
+            flex-wrap: wrap-reverse;
+            width: 120px;
+        }
+        /**/
+        section.row-nowrap{
+            flex-flow: row nowrap;
+            width: 120px;
+        }
+        section.row-wrap{
+            flex-flow: row wrap;
+            width: 120px;
+        }
+        section.column-nowrap{
+            flex-flow: column nowrap;
+            width: 120px;
+        }
+        /**/
+        section.start{
+            justify-content: flex-start;
+            width: 300px;
+        }
+        section.end{
+            justify-content: flex-end;
+            width: 300px;
+        }
+        section.center{
+            justify-content: center;
+            width: 300px;
+        }
+        section.space-between{
+            justify-content: space-between;
+            width: 300px;
+        }
+        section.space-around{
+            justify-content: space-around;
+            width: 300px;
+        }
+        /**/
+        section.stretch{
+            align-items: stretch;
+            height: 130px;
+        }
+        section.a-start{
+            align-items: flex-start;
+            height: 130px;
+        }
+        section.a-end{
+            align-items: flex-end;
+            height: 130px;
+        }
+        section.a-center{
+            align-items: center;
+            height: 130px;
+        }
+        section.baseline{
+            align-items: baseline;
+            height: 130px;
+        }
+        section.justify-align{
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 200px;
+        }
+        /**/
+        section.ac-stretch{
+            align-content: stretch;
+            width: 460px;
+            height: 200px;
+            flex-wrap: wrap;
+        }
+        section.ac-start{
+            align-content: flex-start;
+            width: 460px;
+            height: 200px;
+            flex-wrap: wrap;
+        }
+        section.ac-end{
+            align-content: flex-end;
+            width: 460px;
+            height: 200px;
+            flex-wrap: wrap;
+        }
+        section.ac-center{
+            align-content: center;
+            width: 460px;
+            height: 200px;
+            flex-wrap: wrap;
+        }
+        section.ac-space-between{
+            align-content: space-between;
+            width: 460px;
+            height: 200px;
+            flex-wrap: wrap;
+        }
+        section.ac-space-around{
+            align-content: space-around;
+            width: 460px;
+            height: 200px;
+            flex-wrap: wrap;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Display e FlexBox</h1>
+    <p style="text-align: center;"><small>parte 1</small></p>
+    <h4><a href="index_6.html">Continuar na Proxima Pagina |>>|</a></h4>
+    <h4><a href="index_4.html"> |<<| Voltar para a anterior</a></h4>
+    <hr>
+    <h3>Display:</h3>
+    <p>display block</p>
+    <section class="display-block">
+        <div class="itens">1</div>
+        <div class="itens">2</div>
+        <div class="itens">3</div>
+        <!--Se transformam em itens do tipo bloco-->
+    </section>
+    <p>display flex</p>
+    <section class="display-flex">
+        <div class="itens">1</div>
+        <div class="itens">2</div>
+        <div class="itens">3</div>
+        <div class="itens">3</div>
+        <div class="itens">4</div>
+        <div class="itens">5</div>
+        <div class="itens">6</div>
+        <div class="itens">7</div>
+        <div class="itens">8</div>
+        <div class="itens">9</div>
+        <!--Se alinham verticalmente/ a função faz muita mais coisas e e usadas nas abaixo-->
+    </section>
+    <p>flex-itens-1</p>
+    <section class="display-flex">
+        <div class="itens flex-item-1">1</div>
+        <div class="itens flex-item-1">2</div>
+        <div class="itens flex-item-1">3</div>
+        <!--Todos os items se ajustam ao espaço total da section-->
+    </section>
+
+    <h3>Flex Direction:</h3>
+    <p>flex-direction row</p>
+    <section class="display-flex flex-direction-row">
+        <div class="itens">1</div>
+        <div class="itens">2</div>
+        <div class="itens">3</div>
+        <!--Items se posicionam em linha-->
+    </section>
+    <p>flex-direction row-reverse</p>
+    <section class="display-flex flex-direction-row-reverse">
+        <div class="itens">1</div>
+        <div class="itens">2</div>
+        <div class="itens">3</div>
+        <!--Items se posicionam em linha na ordem contraria-->
+    </section>
+    <p>flex-direction column</p>
+    <section class="display-flex flex-direction-column">
+        <div class="itens">1</div>
+        <div class="itens">2</div>
+        <div class="itens">3</div>
+        <!--Items se posicionam em coluna-->
+    </section>
+    <p>flex-direction column-reverse</p>
+    <section class="display-flex flex-direction-column-reverse">
+        <div class="itens">1</div>
+        <div class="itens">2</div>
+        <div class="itens">3</div>
+        <!--Items se posicionam em coluna na ordem contraria-->
+    </section>
+
+    <h3>Display Wrap:</h3>
+    <p>flex wrap nowrap</p>
+    <section class="display-flex display-nowrap">
+        <div class="itens">teste 1</div>
+        <div class="itens">teste 2</div>
+        <div class="itens">teste 3</div>
+        <!--Item podem vazar para fora da section-->
+    </section>
+    <p>flex wrap wrap</p>
+    <section class="display-flex display-wrap">
+        <div class="itens flex-item-1">teste 1</div>
+        <div class="itens flex-item-1">teste 2</div>
+        <div class="itens flex-item-1">teste 3</div>
+        <!--Itens nao fazam para fora da section como no acima eles quebram para a linha de baixo-->
+    </section>
+    <p>flex-warp reverse-wrap</p>
+    <section class="display-flex display-wrap-reverse">
+        <div class="itens flex-item-1">teste 1</div>
+        <div class="itens flex-item-1">teste 2</div>
+        <div class="itens flex-item-1">teste 3</div>
+        <!--Mesma coisa do de cima mas na ordem contraria-->
+    </section>
+
+    <h3>Flex Flow:</h3>
+    <p></p>
+    <section class="display-flex row-nowrap">
+        <div class="itens">teste 1</div>
+        <div class="itens">teste 2</div>
+        <div class="itens">teste 3</div>
+        <!--mescla o direction e o wrap (linha quebrando conteudo)-->
+    </section>
+    <p></p>
+    <section class="display-flex row-wrap">
+        <div class="itens flex-item-1">teste 1</div>
+        <div class="itens flex-item-1">teste 2</div>
+        <div class="itens flex-item-1">teste 3</div>
+        <!--mesma o direction e o wrap (linha nao quebrando o conteudo)-->
+    </section>
+    <p></p>
+    <section class="display-flex column-nowrap">
+        <div class="itens flex-item-1">teste 1</div>
+        <div class="itens flex-item-1">teste 2</div>
+        <div class="itens flex-item-1">teste 3</div>
+        <!--mescla o direction e o wrap (coluna quebrando o conteudo)-->
+    </section>
+
+    <h3>Justify Content:</h3>
+    <p>justify-content flex-start</p>
+    <section class="display-flex start">
+        <div class="itens">teste 1</div>
+        <div class="itens">teste item 2</div>
+        <div class="itens">teste 3</div>
+        <!--Alinha no começo da linha ou da coluna(se usar o direction columns)-->
+    </section>
+    <p>justify-content flex-end</p>
+    <section class="display-flex end">
+        <div class="itens">teste 1</div>
+        <div class="itens">teste item 2</div>
+        <div class="itens">teste 3</div>
+        <!--Alinha no final da linha ou da coluna(se usar o direction columns)-->
+    </section>
+    <p>justify-content center</p>
+    <section class="display-flex center">
+        <div class="itens">teste 1</div>
+        <div class="itens">teste item 2</div>
+        <div class="itens">teste 3</div>
+        <!--Alinha no centro da linha ou da coluna(se usar o direction columns)-->
+    </section>
+    <p>justify-content space-between</p>
+    <section class="display-flex space-between">
+        <div class="itens">teste 1</div>
+        <div class="itens">teste item 2</div>
+        <div class="itens">teste 3</div>
+        <!--Cria um espaçamento igual para os itens-->
+    </section>
+    <p>justify-content space-around</p>
+    <section class="display-flex space-around">
+        <div class="itens">teste 1</div>
+        <div class="itens">teste item 2</div>
+        <div class="itens">teste 3</div>
+        <!--Cria um espaçamento maior entre os itens-->
+    </section>
+
+    <h3>Align Items:</h3>
+    <p>align-items stretch</p>
+    <section class="display-flex stretch">
+        <div class="itens">teste 1</div>
+        <div class="itens">teste item 2</div>
+        <div class="itens">teste agora item 3</div>
+        <!--Alinha igualmente, pode usar o direction coluns para outra forma legal-->
+    </section>
+    <p>align-items start</p>
+    <section class="display-flex a-start">
+        <div class="itens">teste 1</div>
+        <div class="itens">teste item 2</div>
+        <div class="itens">teste agora item 3</div>
+        <!--Alinha a partir do topo, pode usar o direction coluns para outra forma legal-->
+    </section>
+    <p>align-items end</p>
+    <section class="display-flex a-end">
+        <div class="itens">teste 1</div>
+        <div class="itens">teste item 2</div>
+        <div class="itens">teste agora item 3</div>
+        <!--Alinha a partir da base, pode usar o direction coluns para outra forma legal-->
+    </section>
+    <p>align-items center</p>
+    <section class="display-flex a-center">
+        <div class="itens">teste 1</div>
+        <div class="itens">teste item 2</div>
+        <div class="itens">teste agora item 3</div>
+        <!--Alinha do centro horizontalmente, pode usar o direction coluns para outra forma legal-->
+    </section>
+    <p>align-items baseline</p>
+    <section class="display-flex baseline">
+        <div class="itens">teste 1</div>
+        <div class="itens">2 vai teste</div>
+        <div class="itens">teste agora item 3</div>
+        <!--Alinha pela tipografia-->
+    </section>
+    <p>align-items + justify-content</p>
+    <section class="display-flex justify-align">
+        <p>centro</p>
+        <!--Alinha tanto horizontalmente quando verticalmente-->
+    </section>
+
+    <h3>Align Content:</h3>
+    <p>align-content stretch</p>
+    <section class="display-flex ac-stretch">
+        <div class="itens">testando esse item 1</div>
+        <div class="itens">teste 2 tambem</div>
+        <div class="itens">teste agora o item 3</div>
+        <div class="itens">teste 4</div>
+        <div class="itens">teste 5</div>
+        <div class="itens">teste 6</div>
+        <div class="itens">teste 7</div>
+        <div class="itens">teste 8</div>
+        <!--As linhas estao com crescimento padrao preenchendo toda a section-->
+    </section>
+    <p>align-content start</p>
+    <section class="display-flex ac-start">
+        <div class="itens">testando esse item 1</div>
+        <div class="itens">teste 2 tambem</div>
+        <div class="itens">teste agora o item 3</div>
+        <div class="itens">teste 4</div>
+        <div class="itens">teste 5</div>
+        <div class="itens">teste 6</div>
+        <div class="itens">teste 7</div>
+        <div class="itens">teste 8</div>
+        <!--As linhas estao centralizadas em cima + se adaptando ao tamanho-->
+    </section>
+    <p>align-content end</p>
+    <section class="display-flex ac-end">
+        <div class="itens">testando esse item 1</div>
+        <div class="itens">teste 2 tambem</div>
+        <div class="itens">teste agora o item 3</div>
+        <div class="itens">teste 4</div>
+        <div class="itens">teste 5</div>
+        <div class="itens">teste 6</div>
+        <div class="itens">teste 7</div>
+        <div class="itens">teste 8</div>
+        <!--As linhas estao centralizadas em baixo + adaptando ao tamanho-->
+    </section>
+    <p>align-content center</p>
+    <section class="display-flex ac-center">
+        <div class="itens">testando esse item 1</div>
+        <div class="itens">teste 2 tambem</div>
+        <div class="itens">teste agora o item 3</div>
+        <div class="itens">teste 4</div>
+        <div class="itens">teste 5</div>
+        <div class="itens">teste 6</div>
+        <div class="itens">teste 7</div>
+        <div class="itens">teste 8</div>
+        <!--As linhas estao centralizadas ao centro + adaptando ao tamanho-->
+    </section>
+    <p>align-content space space-between</p>
+    <section class="display-flex ac-space-between">
+        <div class="itens">testando esse item 1</div>
+        <div class="itens">teste 2 tambem</div>
+        <div class="itens">teste agora o item 3</div>
+        <div class="itens">teste 4</div>
+        <div class="itens">teste 5</div>
+        <div class="itens">teste 6</div>
+        <div class="itens">teste 7</div>
+        <div class="itens">teste 8</div>
+        <!--As linhas estao centralizadas e com espaçamento igual-->
+    </section>
+    <p>align-content space-around</p>
+    <section class="display-flex ac-space-around">
+        <div class="itens">testando esse item 1</div>
+        <div class="itens">teste 2 tambem</div>
+        <div class="itens">teste agora o item 3</div>
+        <div class="itens">teste 4</div>
+        <div class="itens">teste 5</div>
+        <div class="itens">teste 6</div>
+        <div class="itens">teste 7</div>
+        <div class="itens">teste 8</div>
+        <!--As linhas estao centralizadas e com espaçamento recuado-->
+    </section>
+</body>
+</html>
