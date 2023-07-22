@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Position and Float</title>
+    <style>
+        section{
+            height: 75vh;
+        }
+        #sticky{
+            position: -webkit-sticky; /*Navegador Safari */
+            position: sticky;
+            top: 0px;
+
+            background-color: tan;
+        }
+        #fixed{
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+
+            background-color: plum;
+        }
+        #relative{
+            position: relative;
+            left: 25%;
+            top: 50px;
+
+            height: 200px;
+            width: 50vw;
+            background-color: paleturquoise;
+        }
+        #absolute{
+            position: absolute;
+            left: 42%;
+            top: 30%;
+
+            height: 80px;
+            width: 80px;
+            background-color: lightgoldenrodyellow;
+        }
+        /**/
+        #img1{
+            float: right;
+        }
+        #img2{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Outros posicionamentos em Html</h1>
+    <h4><a href="grid_layout.html">|<<| Voltar para a anterior</a></h4>
+    <hr>
+    <section>
+        <div id="sticky">Este elemento tem position: sticky</div> <!--congela em uma posicao especifica-->
+        <div id="fixed">Este elemento tem position fixed</div> <!--fica fixo independente da rolagem pra baixo-->
+        <div id="relative">position: relative <!--pode se mover nas 4 direcoes apartir de sua posicao atual-->
+            <div id="absolute">position: absolute</div> <!--pode se mover nas 4 direcoes apartir do seu elemento pai-->
+        </div>
+    </section>
+    <hr>
+    <section>
+        <h3>blablablablablabla</h3>
+        <img id="img1" src="../imagens/img_mod/img_p.png" alt="foto-p" width="100px">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis tempore harum nisi vero sint, odit, nihil explicabo alias saepe nam possimus quibusdam blanditiis odio vel, praesentium voluptatibus eligendi perspiciatis debitis.</p>
+        <!--flutuar a img para a direita (right)-->
+        <br><br>
+        <h3>blablablablablabla</h3>
+        <img id="img2" src="../imagens/img_mod/img_p.png" alt="foto-p" width="100px">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis tempore harum nisi vero sint, odit, nihil explicabo alias saepe nam possimus quibusdam blanditiis odio vel, praesentium voluptatibus eligendi perspiciatis debitis.</p>
+        <!--flutuar a img para a esquerda (left)-->
+    </section>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Iframes e Forms</title>
+    <style>
+        iframe#tela{
+            width: 96vw;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iframes e Formularios</h1>
+    <h4><a href="flexbox.html">Continuar na Proxima Pagina |>>|</a></h4>
+    <h4><a href="background_githubpages.html"> |<<| Voltar para a anterior</a></h4>
+    <hr>
+    <h3>Iframe em uso:</h3>
+    <iframe src="https://pedrobarroso-n.github.io/" frameborder="1" >
+        <!--configuraçoes de width/height na CSS sao as oq predomina/nao por tabelas em iframe-->
+        <!--frameborder so dar pra usar 0 ou 1, usar css para personalizar-->
+    </iframe>
+    <iframe src="../outros/pag_3.html" frameborder="0" width="250px" scolling="auto">
+        <p>Seu navegador nao e compativel</p> <!--caso nao carregue, alguns navegadores de celular nao suportam-->
+        <!--scolling - auto(padrao) yes(da barra de rolagem mesmo q caiba) no(nao da barra de rolagem mesmo q precise)-->
+    </iframe>
+    <h3>Acesso pelo iframe:</h3>
+    <ul>
+        <li><a href="../desafios/modulo_III/002/index.html" target="frame">Abrir pagina I</a></li>
+        <li><a href="../desafios/modulo_III/003/index.html" target="frame">Abrir pagina II</a></li>
+    </ul>
+    <iframe  id="tela" name="frame" srcdoc="<h2>Escolha um dos links acima !!!</h2><img src='../imagens/img5.png' width='350px'>">
+        <!--srcdoc permite criar o conteudo estatico com tags ou com o src normal pode criar um arquivo para isso-->
+        <!--name para o link abrir no iframe ao inves de fora da pagina-->
+    </iframe> 
+    <h3>Iframe seguro:</h3>
+    <iframe src="../outros/form_test.html" frameborder="1" sandbox="allow-same-origin, allow-forms, allow-scripts" referrerpolicy="no-referrer">
+        Seu navegador não é compativel...
+        <!--sandbox bloqueia o acesso a certas coisas do iframe, permintindo certas coisas-->
+        <!--referrerpolicy o iframe nao coletara dados do usuario-->
+    </iframe>
+    <iframe src="../outros/jv.html" referrerpolicy="no-referrer" sandbox="allow-scripts">
+        <!--usando o sandbox e o referrerpolicy podemos liberar o acesso apenas a certos funçoes-->
+    </iframe>
+    <h3>Utilidades do iframe:</h3>
+    <ul>
+        <li>Por Mapas</li>
+        <li>Por Videos</li>
+        <li>Por Planilhas/Documentos/Apresentações</li>  
+    </ul>
+    <h3>Media Queries e Media Features:</h3>
+    <ol type="I">
+        <li><a href="../mediaqueries/mq01/index.html" target="_blank">Ver Exemplo</a></li>
+        <li><a href="../mediaqueries/mq02/index.html" target="_blank">Ver Exemplo</a></li>
+        <li><a href="../mediaqueries/mq03/index.html" target="_blank">Ver Exemplo</a></li>
+        <li><a href="../mediaqueries/mq04/index.html" target="_blank">Ver Exemplo</a></li>
+    </ol>
+    <h3>Formularios em uso:</h3>
+    <form action="../outros/cadastro.php" method="get" autocomplete="on"> 
+        <!--autocomplete="off" nao poe aqueles registros abaixo da caixa-->
+        <!--method="get" para dados não sensiveis (URL compartilhavel)-->
+        <!--method="post" ocultar dados a usuarios padrao, enviar arquivos maiores-->
+        <fieldset>
+            <fieldset>
+                <!--divide o form em partes-->
+                <legend>Dados de cadastro</legend>  <!--nome dessa parte-->
+                <p>
+                    <label for="nome">Usuario</label>
+                    <input type="text" name="nome" id="nome" required maxlength="20" placeholder="digite um nome" autocomplete="username">
+                    <!--name mais util a html e php / id mais util pra outras linguagens-->
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required autocomplete="email" placeholder="digite seu email">
+                    <!--autocomplete - so funciona se o autocomplete do form tiver em "on"-->
+                    <!--required - torna obrigatorio de preencher-->
+                </p>
+                <p>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" size="10" required minlength="6" maxlength="10" autocomplete="current-password" placeholder="digite a senha">
+                    <!--minlength - minimo de caracteres/maxlength - maximo de caracteres-->
+                    <!--size - quantos caracteres mostrará a caixa-->
+                </p>
+                <p>
+                    <label for="fone">Contato</label>
+                    <input type="tel" name="fone" id="fone" autocomplete="tel" placeholder="digite seu n° de telefone" pattern="^[0-9]{5}-[0-9]{4}$">
+                    <!--uso de pattern, estudar como funciona as REgEx para html-->
+                </p>
+                <p>
+                    <label for="estado">Estado</label>
+                    <select name="estado" id="estado">
+                        <option value="" selected>Coloque sua UF</option>
+                        <optgroup label="Nordeste">
+                            <option value="PI">Piauí</option>
+                            <option value="CE">Ceará</option>
+                            <option value="MA">Maranhão</option>
+                        </optgroup>
+                        <optgroup label="Suldeste">
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paiulo</option>
+                            <option value="MG">Minas gerais</option>
+                        </optgroup>
+                    </select>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Dados Especificos</legend>
+                    <legend>Sexo</legend>
+                    <input type="radio" name="sexo" id="Mas" value="M"><label for="Mas">Masculino</label> <br>
+                    <input type="radio" name="sexo" id="Fem" value="F"><label for="Fem">Feminino</label> <br>
+                    <input type="radio" name="sexo" id="Not" checked><label for="Not">Prefiro não dizer</label>
+                    <!--name tem q ser os mesmo senao e possivel marcar mais de um-->
+                    <!--com checked ja vem marcado por padrao-->
+                <p>
+                    <label for="idade">Aniversario</label>
+                    <input type="date" name="nascimento" id="nascimento" size="10">
+                </p>
+                <p>
+                    <label for="escola">Tipo de Instituição de Ensino</label>
+                    <input type="text" name="escola" id="escola" list="tescola">
+                    <datalist id="tescola">
+                        <option>Publica</option>
+                        <option>Privada</option>
+                        <option>Militar</option>
+                    </datagrid>
+                </p>
+                <p>
+                    <label for="nota">Nota escolar</label>
+                    <input type="number" name="nota" id="nota" min="0" max="10" placeholder="digite sua ultima nota" step="0.1">
+                    <!--step="0.1" permite valores com virgula-->
+                </p>
+                <p>
+                    <label for="hora">Periodo de estudo</label>
+                    <input type="time" name="hora" id="hora" value="07:00">
+                    <!--com o value pode por um valor padrao da informacao-->
+            </fieldset>
+            <fieldset>
+                <legend>Lazer e mais</legend>
+                    <p>
+                        <input type="checkbox" name="esporte" id="esporte"><label for="esporte">Esportes</label> <br>
+                        <input type="checkbox" name="games" id="games"><label for="games">Games</label> <br>
+                        <input type="checkbox" name="ler" id="ler"><label for="ler">Leitura</label> <br>
+                        <input type="checkbox" name="desenho" id="desenho"><label for="desenho">Desenhar</label>
+                    </p>
+                    <p>
+                        <label for="cor">Cor Favorita</labe>
+                        <input type="color" name="cor" id="cor" value="#123456"> <br>
+
+                        <label for="nivel">Satisfação</label>
+                        <input type="range" name="nivel" id="nivel" min="1" max="5" value="5"> <br>
+
+                        <label for="arquivo">Mandar arquivo</label>
+                        <input type="file" name="arquivo" id="arquivo">
+                    </p>
+            </fieldset>
+            <fieldset>
+                <legend>JavaScript</legend>
+                    <p>
+                        <label for="num1">Digite um numero</label>
+                        <input type="number" name="num1" id="num1" min="0" max="50" oninput="soma.innerHTML = Number(num1.value) + Number(num2.value)"> <br>
+                        <label for="num2">Digite outro numero</label>
+                        <input type="number" name="num2" id="num2" min="0" max="50" oninput="soma.innerHTML = Number(num1.value) + Number(num2.value)"> <br>
+                        <label for="soma">Soma:</label>
+                        <output name="soma" id="soma"></output> <br>
+                        <label for="nv">Testando</label>
+                        <input type="range" name="nv" id="nv" min="0" max="10" value="5" oninput="nvl.innerHTML = Number(nv.value)">
+                        <output name="nvl">5</output> <br>
+                        <label for="ano">Ano que vc nasceu</label>
+                        <input type="number" name="ano" id="ano" min="1900" max="2023" oninput="calidade()"> <br>
+                        <label for="idd">Esse ano vc faz:</label>
+                        <output name="idd" id="idd"></output>
+                        <script>
+                            function calidade(){
+                                let atual = new Date().getFullYear()
+                                idd.innerHTML = Number(atual) - Number(ano.value)
+                            }
+                        </script>
+                    </p>
+            </fieldset>
+                <p>
+                    <label for="sugestao">Sugestões</label> <br>
+                    <textarea name="sugestao" id="sugestao" cols="40" rows="10"></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="enviar">
+                    <input type="reset" value="limpar">
+                </p>
+        </fieldset>
+    </form> <!--algumas funçoes nao funcionam corretamente em alguns browsers-->
+</body>
+</html>

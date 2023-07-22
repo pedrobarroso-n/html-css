@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizaçao</title>
+    <link rel="stylesheet" href="style.css">  <!--mesmo arquivo pra por as css-->
+    <style>     
+        @import url('https://fonts.googleapis.com/css2?family=Fruktur:ital@0;1&display=swap');
+        @font-face{
+            font-family: 'LilyScriptOne';
+            src: url('fontes/LilyScriptOne-Regular.ttf')format('truetype'), url('fontes/OFL.txt') format('texttype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        pre{
+            font-family: sans-serif;   /*como cada browser pode nao conseguir imprimir deve usar assim -> font-family: 'Courier', Courier, Times; */
+            text-indent: 20px;   /*espacinho antes de cada paragrafo*/
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            display: inline-block;
+        } 
+        a{
+            color: blue;
+        } 
+       
+        div > p{
+            display: none;
+        }
+        /*PSEUDOCLASSES*/
+        div:hover > p{
+            display: block;
+        }
+        div:hover{
+            background-color: darkred; /*quando interagir*/
+            color: cornflowerblue;
+        }
+        .A:visited{ 
+            color: blueviolet; /*quando for usado*/
+        }
+        .A:active{  
+            color: cadetblue; /*quando estiver ativo*/
+        }
+        /*PSEUDOELEMENTOS*/
+        .A::before{ 
+            content: '<='; /*aparece antes do conteudo*/
+        }
+        .A::after{  
+            content: '=>'; /*aparece depois do conteudo*/
+        }
+        aside{
+            width: 350px;
+            background-color: rgb(238, 238, 188);
+            padding: 8px;
+            margin: auto;
+            border-radius: 20px 0px;  /*ou 20px 0px 20px 0px*/
+        }
+        aside > footer{
+            box-shadow: 3px -5px 2px 0px rgba(128, 128, 128, 0.13);   /*ver link na pagina de exemplo*/
+        }
+        aside > nav{
+            font-size: 13px;
+        }
+        span > h2{
+            border: 11px solid transparent; /*obrigatorio para a debaixo*/
+            border-image: url('../imgs/img09.png') 25 repeat;
+            width: 160px;
+            padding: 5px;
+        }
+        #font{
+            font: bold italic 0.75em Verdana,Times;  /*agrupar fonte, tamanho e peso*/
+        }
+        #boxtest{
+            width: 660px;
+            margin: 5px auto 5px auto; /*top > right > bottom > left*/
+            padding: 4px 8px 4px 8px;
+            border: 3px solid coral;
+            outline: 3px dashed chocolate; /*contorno fora da borda*/
+            /*display:blox - o elemento vira em bloco / display:inline - o elemento vira em linha / display:inline-blox - misto entre linha e bloco*/
+        }
+        #bola{
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cores e Harmonia</h1>
+    <h4><a href="background_githubpages.html">Continua na Proxima Pagina |>>|</a></h4>
+    <h4><a href="introducao.html"> |<<| Voltar para a anterior</a></h4>
+    <hr>
+    <h3>Colocando cores:</h3>
+        <p style="color: aquamarine;">por nome</p>
+        <p style="color: #4444;">por decimal</p>
+        <p style="color: #2e2e;">por hexadecimal</p>
+        <p style="color: rgba(2, 2, 199,0.9);">por rgb/rgba</p>
+        <p style="color: hsla(200, 20%, 50%,0.8);">por hsl/hsla</p>
+    <h3>Circulo Cromático:</h3>
+        <ul>
+            <li><a href="">Aula referente ao uso do Circulo Cromático</a>
+            <p>Sites para trabalhar as cores</p>
+            <ol type="I">
+                <li><a href="https://color.adobe.com/pt/create/color-wheel" target="_blank">Adobe Colors</a>
+                <li><a href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" target="_blank">Paletton</a>
+                <li><a href="https://coolors.co/353531-ec4e20-ff9505-016fb9-000000" target="_blank">Collors</a>
+            </ol>
+        </ul>
+    <h3>Degradê e Ex de pagina:</h3>
+        <a href="../outros/pag_3.html">Ir para Exemplo</a>
+    <h3>Fontes, Tamanhos e Pesos:</h3>
+        <pre>Lorem ipsum dolor sit amet, consectetur adipisicing elit. dignissimos obcaecati corrupti <br>quisquam ipsam iure optio cumque rem pariatur magnam, voluptate deleniti quibusdam <br>voluptates rerum numquam eum non? Id, mollitia?            |--ex de fonte--|</pre> <!--"serif" é generica, por isso usara qualquer fonte desse estilo para compor a frase"-->
+        <p>Recomendado pela W3C as medidas de tamanho:</p>
+        <ul>
+            <li style="font-size: 20px;">px
+            <li style="font-size: 1.25em;">em <!--1em == 16px-->
+        </ul>
+        <p>Pesos pras fontes:</p>
+        <ol>
+            <li>lighter
+            <li>normal
+            <li>bold
+            <li>bolder
+            <li>italic
+            <li style="font-weight: 500;">usando valor numerico
+        </ol>
+        <p id="font">Shorthand - reunir tudo em uma unica linha</p>
+    <h3>Fontes Externas:</h3>
+        <a href="https://fonts.google.com/" target="_blank">Buscar no Google Fonts</a> <br>
+        <a href="https://www.dafont.com/pt/" target="_blank">Buscar no DaFont.com</a>
+        <p style="font-family: 'Fruktur', cursive, serif;">Testando fonte importada</p> <!--caso nao funcione coloque a fonte generica, no caso aq "serif"-->
+        <p style="font-family: 'LilyScriptOne', Times;">Testando fonte baixada</p>
+        <ul>
+            <li><p style="color: rgb(80, 156, 131); font-weight: bolder;">usar extensão do chrome "fonts ninja" buscar as fontes usadas em algum site</p>
+            <li><p style="color: rgb(80, 156, 131);font-weight: bolder;">tirar fontes de imagens pode-se usar: WhatFontls ou Font Squirrel ou MyFonts</p>
+        </ul>
+    <h3>Class e id:</h3>
+        <p id="id">nao deve se repetir em outros elementos, uso unico, nao se pode usar o mesmo ID na pagina (#)</p>
+        <p class="primeira_class segunda_class">pode ser repetido em outros elementos, uso multiplo, um elemento pode conter mais de uma CLASS (.)</p>
+    <h3>Pseudo-classes:</h3> 
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <br>
+        <div><p>oi sumido</p></div>
+    <h3>Pseudo-elementos:</h3>
+        <a href="https://youtube.com" class="A">Youtube</a> <br>
+        <a href="https://instagram.com" class="A">Instagram</a>
+    <h3>Box Model:</h3>
+        <p id="boxtest">elementos de bloco pulam pra proxima linha / elementos de linha continuam na linha que foram postos</p>
+    <h3>Tags Agrupadas:</h3>
+    <aside id="divzona">  <!--"aside" nao deve ser usado assim, so usei de exemplo-->
+        <header>
+            <h1>Exemplo em uso</h1>
+        </header>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=JACiDRNWjjQ" target="_blank">Como fazer sombras html</a> <br>
+            <a href="https://www.youtube.com/watch?v=JACiDRNWjjQ" target="_blank">box-shadow no Css 3</a>
+        </nav>
+        <main>
+            <section>
+                <h2>Assunto 1</h2>
+                <article>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis hic nulla molestias quos praesentium. Sapiente dolorem fuga a ea neque consequuntur repellendus mollitia aspernatur recusandae illum, explicabo possimus nostrum optio.</p>
+                </article>
+            </section>
+            <section>
+                <h2>Assunto 2</h2>
+                <article>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis hic nulla molestias quos praesentium. Sapiente dolorem fuga a ea neque consequuntur repellendus mollitia aspernatur recusandae illum, explicabo possimus nostrum optio.</p>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <h5>Direitos de uso reservados a eu mesmo</h5>
+        </footer>
+    </aside>
+    <h3>Bordas:</h3>
+    <div id="bola"></div>
+    <span>
+        <h2>Testando aqui!</h2>
+    </span>
+</body>
+</html>

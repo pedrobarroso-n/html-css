@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/*GERAIS*/
+h3{
+    text-decoration: underline;
+}
+h1{
+    text-align: center;
+    font-family: fantasy;
+}
+abbr{
+    text-decoration: none;
+}
+h4{
+    font-family: monospace;
+}
+h4 > a{
+    text-decoration: none;
+}
+fieldset{
+    width: 400px;
+}
+iframe{
+    padding: 10px;
+}
+/*DO INDEX_1*/
+.cor2{
+    color: aqua;
+    text-decoration:  overline;
+}
+.cor{
+    color: goldenrod;
+}
+
+.externo{
+    color: rgb(196, 196, 18);
+}

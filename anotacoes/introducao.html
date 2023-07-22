@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos Basicos</title>
+    <link rel="stylesheet" href="style.css"> <!--LINKANDO COM O ARQUIVO .css-->
+    <style>
+        .interno{
+            color:rgb(224, 140, 13);
+        }
+    </style>
+</head>
+<body>
+   <h1>Olá, Mundo!</h1>
+   <h4><a href="estililizacao.html">Continua na Proxima Pagina |>>|</a></h4>
+   <hr>
+   <p>
+        aqui denovo para melhorar, <ins>novo</ins> <del>ano</del> <mark>2023</mark><small>!!!</small> <br><strong class="cor"><em>meu site esta otimo</em></strong>
+   </p>
+   <!--<b> == <strong> / <i> == <em>-->
+   <h3 class="cor2">?CORES?</h3>
+   <h3>Emojis</h3>
+        <p>
+            &#x1F596; &#x1F913;
+        </p>
+    <h3>Símbolos</h3>
+        <p>
+            &reg; &copy; &trade; &uparrow; &vangrt;
+        </p>
+    <h3>Citações:</h3>
+        <p>
+            <small>H<sub>2</sub>O / 10<sup>5</sup></small> <br>
+            <abbr title="verdade"><q>sou maravilhoso</q></abbr> <!--<q> -> CITAÇÃO SIMPLES / <abbr> -> PRA CAIXINHA APARECER QUANDO PASSAR O MOUSE--> 
+            <blockquote>sou maravilhoso</blockquote> <!--CITAÇÃO EM BLOCO-->
+            <bdo dir="rtl">quadrado</bdo>
+        </p>
+        <code> <!--COMENTAR CODIGO-->
+            print("Olá") <br>
+            git.toymandel/get('UserMaster')
+        </code>
+    <h3>Imagens:</h3>
+        <img src="../imagens/img2.png" alt="html5+css+javascript" width="24%">
+        <br>
+        <img src="../imagens/img5.png" alt="html5+css+javascript" width="22%"> 
+    <h3>Listas:</h3>
+        <p><em>ordenadas</em></p>
+        <ol>
+            <li>HTML  <!--TERMINAÇÃO </li> É OPCIONAL-->
+            <li>CSS
+        </ol>
+        <ol type="1" start="11">  <!--TYPE "1"(numeros) "A/a"(alfabeto) "I/i"(n° romano)-->
+            <li>oii
+            <li>olá
+        </ol>
+        <p><em>não ordenadas</em></p>
+        <ul>
+            <li>JavaScript
+            <li>Python
+        </ul>
+        <ul type="square">  <!--TYPE "circle"(circulo) "disc"(disco) "square"(quadrado)-->
+            <li>C++
+            <li>Ruby
+        </ul>
+        <p><em>mistas</em></p>
+        <ol>
+            <li>Mobile Games
+            <ul>
+                <li>Clash Royale
+                <li>Free Fire
+            </ul>
+        </ol>
+        <p><em>definições</em></p>
+        <dl>
+            <dt>Minecraft</dt> <!--TERMO-->
+            <dd>jogo muito massa de cubos e aventuras</dd> <!--DEFINIÇÃO DO TERMO-->
+        </dl>
+    <h3>Links:</h3>
+        <p>links externos</p>
+        <a href="https://www.youtube.com/">Acessar o Youtube</a> <br> <!--RECOMENDADO SE FOR SEU-->
+        <a href="https://www.youtube.com/" target="_blank">Acessar o Youtube</a> <!--RECOMENDADO SER Ñ FOR SEU-->
+        <p>links internos</p>
+        <a href="../outros/pag_2.html" rel="next" target="_self">Acessar Pagina 2</a> <br> <!--"next" IR PRA PROXIMA \ "prev" VOLTAR A ANTERIOR \ "nofollow" NAO TEM MEU CONSETIMENTO-->
+        <a href="../outros/noticias/pag_3.html" rel="next" target="_self">Acessar Pagina 3</a> <!--TARGET "self" ABRIR NESSA ABA-->
+        <p>links de download</p>
+        <a href="../arquivos/nutricionista-ufv-2022.pdf" download="nutricionista-ufv-2022.pdf" type="application/pdf">baixar arquivo .pdf</a> <br> <!--TYPE PARA DIFERENTES TIPOS DE ARQUIVO-->
+        <a href="../arquivos/nutricionista-ufv-2022.zip" download="nutricionista-ufv-2022.zip" type="application/zip">baixar arquivo .zip</a>
+    <h3>Imagens para telas diferentes:</h3>
+        <picture>
+            <source media="(max-width: 750px)" srcset="../imagens/img_mod/img_p.png" type="image/png"> <!--MUDAR A IMG COM O TAMANHO DA TELA-->
+            <source media="(max-width: 1050px)" srcset="../imagens/img_mod/img_m.png" type="image/png">
+            <img src="../imagens/img_mod/img_g.png" alt="foto dinamica">
+        </picture>
+    <h3>Áudios:</h3>
+        <audio src="../audios/8bits_song.mp3" controls loop></audio> <br> <!--LOOP CASO QUEIRA QUE TOQUE REPENTINAMENTE-->
+        <audio preload="metadata" controls> <!--PRELOAD "auto(precarregar se totalmente carregado)" "metadata(precarregar aos poucos)" "none(precarregar na hora do play)"-->
+            <source src="../audios/8bits_song.mp3" type="audio/mpeg">  <!--VERIFICAR SE O BROWSER SUPORTA QUAIS EXTENSOES "mp3" "ogg" "wav"(evitar usar)-->
+            <source src="../audios/song2.ogg" type="audio/ogg">
+            <source src="../audios/mixkit-cinematic-impact-waves-781.wav" type="audio/wav">
+        </audio>
+    <h3>Vídeos:</h3>
+        <p>hospedagem local</p> <!--CUSTO DE BANDA LARGA ALTO-->
+        <video src="../videos/videuzin_mp4.mp4" width="400" height="300" controls></video> <br>
+        <video width="400" height="300" controls> <!--MESMO JEITO DO AUDIO VARIAS EXTENSOES-->
+            <source src="../videos/videuzin_m4v.m4v" type="video/m4v">
+            <source src="../videos/videuzin_ovg.ogv" type="video/ogv">
+            <source src="../videos/videuzin_webm.webm" type="video/webm">
+        </video>
+        <p>hospedagem externa</p> <!--SEM CUSTO, POREM PUBLICO-->
+        <iframe width="400" height="300" src="https://www.youtube.com/embed/3hng-hmSv2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+    <h3>Estilo compartilhado:</h3>
+        <a href="../outros/pag_2.html">Ir pra outra pagina</a>
+    <h3>Estilos inline\interno\externo:</h3>
+        <p style="color: cadetblue;">Este usa o inline, usar apenas em casos especificos</p>
+        <p class="interno">Este usa o interno, usar apenas em casos como o da pagina 2</p>
+        <p class="externo">Este usa o externo, usar sempre que possivel, melhor dos tres</p>
+</body>
+</html>

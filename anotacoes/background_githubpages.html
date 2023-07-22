@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Github pages e Posicionamento</title>
+    <style> 
+        div.quadrado{
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+        }
+        div#q1{
+            background-color: lightgreen;
+        }
+        div#q2{
+            background-image: linear-gradient(orange,red);
+        }
+        div#q3{
+            background-image: url(../imgs/pattern001.png);
+        }
+        div#big{
+            height: 300px;
+            width: 915px;
+            padding: 15px;
+            background-image: url(../imgs/wallpaper001.jpg);
+        }
+        div#big2{
+            background-image: url(https://gustavoguanabara.github.io/html-css/imagens/mascote.png);
+            background-size: 50px 50px;     /*tamanho de cada imagem da malha (mascote do curso em video)*/
+            background-repeat: repeat;      /*repetir ou nao, em qual eixo x ou y*/
+            margin-top: 30px;
+            width: 955px;
+            height: 200px;
+        }
+        div.bloco{
+            height: 170px;
+            width: 48%;
+            margin: auto;
+            border: 2px dashed black;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background-image: url(../imgs/wallpaper003.jpg);
+        }
+        div#q4{
+            background-position: left top;
+        }
+        div#q5{
+            background-position: left bottom;
+        }
+        div#q6{
+            background-position: right bottom;
+        }
+        div#q7{
+            background-position: right top;
+        }
+        div#q8{
+            background-position: center center;
+        }
+        #alinhar{
+            text-align: center;
+        }
+        p#link{
+            text-align: center;
+            width: 200px;
+            margin: auto;
+            padding: 15px 0px;
+            outline: darkblue dashed;
+            font-size: 1.2em;
+        }
+        section#contem{
+            height: 300px;
+            padding: 10px;
+            position: relative;
+            background-color: aqua;
+            background-image: url(../imgs/target001.png);
+            background-size: 100% 100%;
+        }
+        article#contido{
+            height: 200px;
+            width: 350px;
+            position: absolute;
+            background-color: blueviolet;
+            background-image: url(../imgs/target001.png);
+            background-size: 100% 100%;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+        table#t1{
+            width: 200px;  
+        }
+        #t1 tr{
+            background-color: yellowgreen;
+        }
+        td.dado{
+            background-color: yellow;
+        }
+        table#t2{
+            width: 200px;
+            height: 200px;
+        }
+        #t2 tr{
+            background-color: transparent;
+        }
+        #t2 td{
+            text-align: center;
+            vertical-align: top;  /*na vertical -(top/bottom/middle)*/
+        }
+        table#t3{
+            width: 400px;
+        }
+        #t3 th{
+            background-color: gray;
+            padding: 7px;
+            border: 1px solid black;
+        }
+        #t3 .num{
+            text-align: right;
+        }
+        #t3 caption{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: gainsboro;
+            padding: 7px;
+        }
+        table{
+            border-collapse: collapse;  /*collapse -(tira o espaço entre as bordas), separete -(deixa espaço entre as bordas)*/
+        }
+        td{
+            border: 1px solid black;
+            padding: 8px;
+        }
+        #t3 tbody > tr:nth-child(even){  /*2n-1 ou odd (zebrado ordem impar), 2n ou even (zebrado ordem par)*/
+            background-color: silver;
+        }
+        table#t4{
+            width: 250px;
+            text-align: center;
+        }
+        table#t5{
+            width: 450px;
+        }
+        #t5 tr th{
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
+        table#t6{
+            width: 300px;
+        }
+        #t6 caption{
+            font-family: monospace;
+            font-size: 1.3em;
+        }
+        #t6 th{
+            border: 1px solid black;
+            padding: 8px;
+        }
+        .destaque{
+            background-color: chartreuse;
+        }
+        .cidade{
+            background-color: aquamarine;
+        }
+        #t7 th,td{
+            border: 1px solid black;
+            padding: 15px;
+        }
+        #t7 tr:nth-child(even){
+            background-color: rgb(240, 238, 238);
+        }
+        div#container{
+            overflow-x: auto; /*para criar a rolagem lateral na tabela responsiva*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagens de Fundo e Tabelas</h1>
+    <h4><a href="forms_iframes.html">Continuar na Proxima Pagina |>>|</a></h4>
+    <h4><a href="estililizacao.html"> |<<| Voltar para a anterior</a></h4>
+    <hr>
+    <h3>Por imagens no fundo:</h3>
+    <div id="big">  
+        <div class="quadrado" id="q1"></div>
+        <div class="quadrado" id="q2"></div>
+        <div class="quadrado" id="q3"></div>
+    </div>
+    <div id="big2"></div>
+    <h3>Posicionamento de imagem:</h3>
+    <div class="bloco" id="q4"></div>
+    <div class="bloco" id="q5"></div>
+    <div class="bloco" id="q6"></div>
+    <div class="bloco" id="q7"></div>
+    <div class="bloco" id="q8"></div>
+    <p id="alinhar">*por padrão vem left-top*</p>
+    <h3>Tratamento de Imagens no fundo:</h3>
+    <p id="link"><a href="../outros/pag_4.html">Ver Exemplo</a></p>
+    <h3>Centralização Vertical de caixas:</h3>
+    <section id="contem"><article id="contido"></article></section>
+    <h3>Tabelas no html:</h3>
+    <table id="t1"> 
+        <tr>  <!--1ª linha-->
+            <td>A1
+            <td>B1
+            <td>C1
+        <tr>  <!--2ª linha-->
+            <td>A2
+            <td>B2
+            <td class="dado">C2
+        <tr>  <!--3ª linha-->
+            <td>A3
+            <td>B3
+            <td>C3
+        <tr>  <!--4ª linha-->
+            <td>A4
+            <td>B4
+    </table>  <!--tr e td não precisa de fechamento-->
+    <br>
+    <table id="t2">
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+    </table>
+    <h3>Tabelas Grandes e Scope:</h3>
+    <table id="t3">
+        <caption>
+            População no Nordeste - 1993
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Estados</th>  <!--tag para titulo-->
+                <th scope="col" style="width: 80px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">599 325</td> <!--tag para dado-->
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">649 223</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">609 223</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">715 678</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">701 897</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">558 321</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">689 880</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">698 990</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">600 234</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Totalização</th> <!--scope ajuda o mecanismo de busca dos browser, titulo = dados em baixo (col) titulo = dados ao lado (row)-->
+                <td class="num">5 822 771</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h3>Mesclagem de células:</h3>
+    <table id="t4">
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td>  <!--ocupar 2 espaços-->
+        </tr>
+        <tr>
+            <td rowspan="3">D</td>  <!--ocupar 3 espaços-->
+            <td>E</td>
+            <td rowspan="2">F</td>
+        </tr>
+        <tr>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td colspan="2">L</td>
+        </tr>
+    </table>
+    <h3>Tabela Exemplo:</h3>
+    <table id="t5">
+        <caption></caption>
+        <thead>
+            <tr>
+                <th scope="col">Grupo</th>
+                <th scope="col">Nomes</th>
+                <th scope="colgroup" colspan="3">Filmes</th> <!--colgroup pq tem mais de uma coluna-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Mulher</th> <!--rowgroup pq tem mais de uma linha-->
+                <td>Anna</td>
+                <td>Star War</td>
+                <td>Rush</td>
+                <td>Pixels</td>
+            </tr>
+            <tr>
+                <td>Kattia</td>
+                <td>Star War V</td>
+                <td>Emojii</td>
+                <td>Pânico</td>
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="3">Homem</th>
+                <td>Pablo</td>
+                <td>Star War II</td>
+                <td>Hora do Rush</td>
+                <td>Mario Bros</td>
+            </tr>
+            <tr>
+                <td>Guito</td>
+                <td>Star War III</td>
+                <td>Panico VI</td>
+                <td>Vingadores</td>
+            </tr>
+            <tr>
+                <td>Jeki</td>
+                <td>Star War IV</td>
+                <td>Lego Batman</td>
+                <td>AnaBely II</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <table id="t6">
+        <colgroup>
+            <col span="2"> <!--Tudo q modificar nessa coluna afetara tbm a outra, pode por mais numeros para mais colunas-->
+            <col class="cidade">  <!--Modificar uma coluna, cada uma representa-->
+            <col>
+        </colgroup>
+        <caption>Cadrastro</caption>
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Profissão</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pedro</td>
+                <td>M</td>
+                <td>21</td>
+                <td>Enfermeiro</td>
+            </tr>
+            <tr class="destaque">
+                <td>Maria</td>
+                <td>F</td>
+                <td>27</td>
+                <td>Engenheira</td>
+            </tr>
+            <tr>
+                <td>Kelly</td>
+                <td>M</td>
+                <td>16</td>
+                <td>Tecnico em Informatica</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Tabela responsiva:</h3>
+    <div id="container">
+        <table id="t7">
+            <tr>
+                <th>Produto</th>
+                <th>Jan</th>
+                <th>Fev</th>
+                <th>Mar</th>
+                <th>Abr</th>
+                <th>Mai</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Ago</th>
+                <th>Set</th>
+                <th>Out</th>
+                <th>Nov</th>
+                <th>Dez</th>
+            </tr>
+            <tr>
+                <td>Negico</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>22</td>
+                <td>29</td>
+                <td>42</td>
+                <td>33</td>
+                <td>25</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Negico</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>22</td>
+                <td>29</td>
+                <td>42</td>
+                <td>33</td>
+                <td>25</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Negico</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>22</td>
+                <td>29</td>
+                <td>42</td>
+                <td>33</td>
+                <td>25</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Negico</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>22</td>
+                <td>29</td>
+                <td>42</td>
+                <td>33</td>
+                <td>25</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Negico</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>22</td>
+                <td>29</td>
+                <td>42</td>
+                <td>33</td>
+                <td>25</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Negico</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11</td>
+                <td>17</td>
+                <td>22</td>
+                <td>29</td>
+                <td>42</td>
+                <td>33</td>
+                <td>25</td>
+                <td>17</td>
+                <td>9</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

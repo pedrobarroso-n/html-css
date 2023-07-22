@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/*Demais versoes*/
+
+/*Typical Device Breakpoints: (day 12.05.23)
+
+small screen - 600px and down
+mobile - 600px up to 768px
+tablets - 768px up to 992px
+desktop - 992px up to 1200px
+big screen - 1200px and up
+*/
+
+@media print{ /*IMPRESSORA*/
+    body{
+        background-image: url(../imagens/back-print.jpg);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.8em;
+    }
+    main h1{
+        color: black;
+        text-shadow: none;
+    }
+    main::after{
+        content: 'acesse os repositorios em https://github.com/pedrobarros-n veja outros projetos';
+        text-decoration: overline;
+    }
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#desktop{display: none;}
+    img#tv{display: none;}
+    img#print{display: block;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){    /*TABLET*/
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    img#phone{display: none;}
+    img#tablet{display: block;}
+    img#desktop{display: none;}
+    img#tv{display: none;}
+    img#print{display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){    /*DESKTOP*/
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#desktop{display: block;}
+    img#tv{display: none;}
+    img#print{display: none;}
+}
+
+@media screen and (min-width: 1200px){    /*TELAS GRANDES*/
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#desktop{display: none;}
+    img#tv{display: block;}
+    img#print{display: none;}
+}

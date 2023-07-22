@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Grid Layout</title>
+    <style>
+        /*1ª CAIXA*/
+        .grid > div{
+            background-color: skyblue;
+            border: 2px solid whitesmoke;
+            border-radius: 7px;
+            padding: 8px;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 50px;
+
+            /*
+            grid-template-columns / grid-template-rows - define quantas colunas/linhas tera a div mestre ex[1fr 1px], fara duas colunas/linhas pode usar px(para ser fixo) ou fr(para ser flexivel)
+
+            repeat() funcao de repeticao ex[grid-template-xxx: repeat(3, 1fr);], fara 3 colunas/linhas de 1fr cada 
+                                         ex2[: 1fr repeat(2, 2fr) 200px;], fara 4 colunas/linhas 1fr 2fr 2fr 200px
+                                         ex3[: repeat(3, 1fr 2fr);], fara 6 colunas/linhas 1fr 2fr 1fr 2fr 1fr 2fr
+            
+            grid-auto-rows / grid-auto-columns - parecido com o grid-template, e possivel definir limites com a funcao abaixo *NAO suporta repeat*
+
+            minmax() funcao de minimo e maximo ex[grid-auto-xxx: minmax(50px, auto);], fara q o minimo tamanho seja 50px e o maximo seja dado automaticamente
+
+            grid-column-gap - da um espacamento entre as colunas ex[: 10px;] (gutters)
+            grid-row-gap - da um espacamento entre as linhas ex[: 1em;] (gutters)
+            */
+        }
+        /*2ª CAIXA*/
+        .box3{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .box3 > div{
+            padding: 7px;
+            background-color: rgba(137, 43, 226, 0.459);
+            border: 2px solid saddlebrown;
+            border-radius: 3px;
+        }
+        /*3ª CAIXA*/
+        .box4{
+            grid-column-start: 1; /*comece na linha horizontal 1*/
+            grid-column-end: 4; /*termine na linha horizontal 4*/
+            grid-row-start: 1; /*comece na linha vertical 1*/
+            grid-row-end: 4; /*termine na linha vertical 4*/
+            z-index: 1; 
+        }
+        .box5{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3; /*comeca dentro da box4*/
+            grid-row-end: 5;
+            z-index: 2; /*o z-index maior sobrepoe o z-index menor*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Layout</h1>
+    <h4><a href="position.html">Continuar na Proxima Pagina |>>|</a></h4>
+    <h4><a href="flexbox.html"> |<<| Voltar para a anterior</a></h4>
+    <hr>
+
+    <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout" target="_blank">https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout</a></p>
+
+    <div class="grid" style="background-color:lightgrey;border-radius:7px;border:3px solid saddlebrown;">
+        <div class="box1">Um</div>
+        <div class="box2">Dois</div>
+        <div>Tres</div>
+        <div>Quatro</div>
+        <div>Cinco</div>
+    </div>
+
+    <br><br>
+
+    <div class="grid" style="background-color:lightgrey;border-radius:7px;border:3px solid saddlebrown;">
+        <div class="box3">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+        </div>
+        <div>Dois</div>
+        <div>Tres</div>
+        <div>Quatro</div>
+        <div>Cinco</div>
+    </div>
+
+    <br><br>
+
+    <div class="grid" style="background-color:lightgrey;border-radius:7px;border:3px solid saddlebrown;">
+        <div class="box4">Um</div>
+        <div class="box5">Dois</div>
+        <div>Tres</div>
+        <div>Quatro</div>
+        <div>Cinco</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FlexBox</title>
+    <style>
+        article{
+            background-color: skyblue;
+
+            /*
+            flex - [1] cobrem todo o espaco da section com os articles do mesmo tamanho
+            flex - [2] da mais espaco que o 1 (OBS: so da pra ver se pouco articles tiverem)
+            flex - [1 200px] da 200px de minimo e deixa ser destribuido o restante pelo flex
+            */
+        }
+        section{
+            border: 1px solid #ccc;
+            display: flex;
+ 
+            /*
+            flex-direction - muda a orientacao do conteudo [column] colunas ou [row] linhas
+            flex-wrap - [wrap] nao deixa extrapolar a section, [nowrap] deixa extrapolar
+            flex-flow - direction e wrap juntos, ex:[row wrap / column nowrap]
+
+            align-items:  [center] alinha verticalmente no centro 
+                          [stretch] preenche completamente a section
+                          [flex-end / flex-start] poen no fim / no inicio da section
+
+            justify-content:  [center] alinha horizontalmente no centro
+                              [flex-end / flex-start] poe no fim / no inicio da section
+                              [space-around / space-between] espaca os articles
+
+            order - modifica a ordem dos articles, [padrao 0], aparecem do menor para o maior
+            flex - juncao do 
+            */ 
+        }
+
+        /*exemplo mais complexo*/
+        div{
+            background-color: lightcoral;
+            flex: 1 200px;
+        }
+        div:nth-of-type(2){
+            display: flex;
+            flex-flow: column;
+            flex: 1 180px;
+        }
+        div:nth-last-of-type(2) span:first-child {
+            display: flex;
+            flex: 1 30px;
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+        button{
+            flex: 1; /*quando diminuir a tela se mantem responsivo*/
+        }
+    </style>
+</head>
+<body>
+
+    <h1>FlexBox</h1>
+    <h4><a href="grid_layout.html">Continuar na Proxima Pagina |>>|</a></h4>
+    <h4><a href="forms_iframes.html"> |<<| Voltar para a anterior</a></h4>
+    <hr>
+
+    <header style="background-color: chocolate; padding: 15px; text-align: center;">
+        Titulo
+    </header>
+    <section>
+        <article style="margin: 5px; padding: 10px;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, assumenda totam facilis beatae est nostrum iure ut quod! Accusamus aliquid magni, tempora expedita fugiat voluptate fuga ipsam optio sint similique?
+        </article>
+        <article style="margin: 5px; padding: 10px;">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos nisi recusandae voluptas, voluptate non, explicabo unde alias ratione perferendis iste ad omnis aliquam qui aut? Officiis perspiciatis non porro cum!
+        </article>
+        <article style="margin: 5px; padding: 10px;">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error aut alias ipsa commodi deserunt ut totam, voluptas, cupiditate veritatis officiis soluta asperiores nulla excepturi, porro quisquam explicabo. Obcaecati, quaerat ipsum?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit vel modi fugiat veniam, ut illo dignissimos hic, doloribus iste animi quia, esse voluptatum et pariatur deserunt quaerat. Saepe, incidunt eveniet.
+        </article>
+    </section>
+
+    <br><br><br><br>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox</a>
+    <br><br><br><br>
+
+    <header style="background-color: darkcyan; padding: 15px; text-align: center;">
+        Exemplo de Flexbox Complexo
+    </header>
+    <section>
+        <div style="margin: 5px; padding: 10px;">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, doloribus, odio pariatur, praesentium molestias consequuntur rem quasi deserunt nesciunt quibusdam itaque? Possimus magni optio facilis neque quaerat perspiciatis ea officia?
+        </div>
+        <div style="margin: 5px; padding: 10px;">
+            <span>
+                <button style="margin: 5px;">botao 1</button>
+                <button style="margin: 5px;">botao 2</button>
+                <button style="margin: 5px;">botao 3</button>
+                <button style="margin: 5px;">botao 4</button>
+                <button style="margin: 5px;">botao 5</button>
+            </span>
+            <span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis voluptas quibusdam, sit recusandae, voluptate velit ducimus culpa illum soluta fugit nulla quos in maiores saepe assumenda ea corporis error quasi!
+            </span>
+        </div>
+        <div style="margin: 5px; padding: 10px;">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, alias. Consequuntur sequi quis eaque assumenda aperiam ea, quasi optio incidunt eius nisi et debitis, autem repellendus a illo? Qui, labore.
+        </div>
+    </section>
+</body>
+</html>
